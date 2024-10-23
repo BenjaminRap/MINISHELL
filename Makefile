@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mhotting <mhotting@student.42.fr>          +#+  +:+       +#+         #
+#    By: brappo <brappo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 12:21:10 by mhotting          #+#    #+#              #
-#    Updated: 2024/05/17 10:34:30 by mhotting         ###   ########.fr        #
+#    Updated: 2024/10/23 13:37:48 by brappo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ HEADERS_FILES			=	minishell.h
 HEADERS					=	$(addprefix $(HEADERS_DIR), $(HEADERS_FILES))
 
 # LIBFT
-LIBFT_DIR				=	libft/
+LIBFT_DIR				=	code_kiwi_libft/
 LIBFT_FILE				=	libft.a
 LIBFT					=	$(addprefix $(LIBFT_DIR), $(LIBFT_FILE))
 LIBFT_HEADERS_SUBDIR	=	includes/

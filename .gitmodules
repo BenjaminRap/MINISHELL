@@ -1,0 +1,6 @@
+[submodule "libft"]
+	path = libft
+	url = https://github.com/code-kiwi/42_LIBFT.git
+[submodule "code_kiwi_libft"]
+	path = code_kiwi_libft
+	url = https://github.com/code-kiwi/42_LIBFT.git
