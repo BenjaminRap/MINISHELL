@@ -1,14 +1,14 @@
 # MINISHELL
 
-<span style="font-size: 18px">**Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.
-Il reproduit une partie significative du comportement d'un shell classique.</span>
+**Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.
+Il reproduit une partie significative du comportement d'un shell classique.
 
 ---
 
 ## Installation
 
 <details>
-<summary style="font-size: 18px">Option 1 : Docker (toutes plateformes)</summary>
+<summary>Option 1 : Docker (toutes plateformes)</summary>
 
 1. Installer Docker : [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
@@ -21,7 +21,7 @@ docker run --rm -it benjaminrap/minishell:latest
 </details>
 
 <details>
-<summary style="font-size: 18px">Option 2 : Linux (Debian/Ubuntu)</summary>
+<summary>Option 2 : Linux (Debian/Ubuntu)</summary>
 
 1. Cloner le dépôt :
 
@@ -55,9 +55,8 @@ make all
 
 ## Capacités
 
-<div style="padding-left: 10px">
 <details>
-<summary style="font-size: 18px; ">Exécution de commandes</summary>
+<summary>Exécution de commandes</summary>
 
 
   Le shell peut exécuter des programmes en les recherchant automatiquement dans la variable d'environnement `PATH`.
@@ -69,7 +68,7 @@ minishell  README.md  src
 </details>
 
 <details>
-<summary style="font-size: 18px">Pipes</summary>
+<summary>Pipes</summary>
 
 Les pipes permettent de connecter la sortie d'une commande à l'entrée d'une autre.
 
@@ -80,7 +79,7 @@ $ ls | wc -l
 </details>
 
 <details>
-<summary style="font-size: 18px">Redirections</summary>
+<summary>Redirections</summary>
 
 Le shell supporte les redirections d'entrée et de sortie.
 
@@ -105,7 +104,7 @@ $ echo "another line" >> file.txt
 </details>
 
 <details>
-<summary style="font-size: 18px">Heredoc</summary>
+<summary>Heredoc</summary>
 
 Permet de fournir un bloc de texte directement à une commande.
 
@@ -120,7 +119,7 @@ world
 </details>
 
 <details>
-<summary style="font-size: 18px">Builtins</summary>
+<summary>Builtins</summary>
 
 Certaines commandes sont exécutées directement par le shell :
 
@@ -142,7 +141,7 @@ $ pwd
 </details>
 
 <details>
-<summary style="font-size: 18px">variables d'environnement</summary>
+<summary>variables d'environnement</summary>
 
 Le shell permet d'utiliser et de définir des variables d'environnement.
 
@@ -162,7 +161,7 @@ $ echo $?
 </details>
 
 <details>
-<summary style="font-size: 18px">Exécution conditionnelle</summary>
+<summary>Exécution conditionnelle</summary>
 
 Le shell supporte les opérateurs logiques `&&` et `||`.
 
@@ -177,7 +176,7 @@ file not found
 </details>
 
 <details>
-<summary style="font-size: 18px">Séparation de commandes</summary>
+<summary>Séparation de commandes</summary>
 
 Plusieurs commandes peuvent être exécutées sur une seule ligne avec `;`.
 
@@ -189,7 +188,7 @@ world
 </details>
 
 <details>
-<summary style="font-size: 18px">Subshells</summary>
+<summary>Subshells</summary>
 
 Les commandes peuvent être exécutées dans un sous-shell.
 
@@ -199,7 +198,7 @@ $ (cd /tmp && ls)
 </details>
 
 <details>
-<summary style="font-size: 18px">Navigation dans la ligne de commande</summary>
+<summary>Navigation dans la ligne de commande</summary>
 
 Grâce à l'intégration de `readline`, il est possible d'éditer la ligne de commande :
 
@@ -208,7 +207,7 @@ Grâce à l'intégration de `readline`, il est possible d'éditer la ligne de co
 </details>
 
 <details>
-<summary style="font-size: 18px">Historique des commandes</summary>
+<summary>Historique des commandes</summary>
 
 Les commandes précédemment exécutées sont sauvegardées dans l'historique.
 
@@ -221,7 +220,7 @@ $ history
 </details>
 
 <details>
-<summary style="font-size: 18px">Autocomplétion</summary>
+<summary>Autocomplétion</summary>
 
 Le shell supporte l'autocomplétion pour faciliter la saisie des commandes.
 
@@ -232,7 +231,7 @@ echo
 </details>
 
 <details>
-<summary style="font-size: 18px">Gestion des signaux</summary>
+<summary>Gestion des signaux</summary>
 
 Le shell gère certains signaux utilisateur :
 
@@ -242,7 +241,7 @@ Le shell gère certains signaux utilisateur :
 </details>
 
 <details>
-<summary style="font-size: 18px">Commentaires</summary>
+<summary>Commentaires</summary>
 
 Le shell supporte les commentaires dans les commandes.
 
@@ -255,7 +254,7 @@ Les commentaires peuvent également s'étendre sur plusieurs lignes.
 </details>
 
 <details>
-<summary style="font-size: 18px">Wildcards</summary>
+<summary>Wildcards</summary>
 
 Le shell supporte l'expansion des wildcards.
 
@@ -269,4 +268,3 @@ $ ls file?.txt
 file1.txt  file2.txt
 ```
 </details>
-</div>
