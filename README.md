@@ -1,6 +1,6 @@
 # MINISHELL
 
-**Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.  
+**Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.
 Il reproduit une partie significative du comportement d'un shell classique.
 
 ![demo](https://github.com/user-attachments/assets/4f100bf5-4485-4c01-9d3f-c37baa0bcb5c)
@@ -18,7 +18,7 @@ Il reproduit une partie significative du comportement d'un shell classique.
 
 ```bash
 docker run --rm -it benjaminrap/minishell:latest
-````
+```
 
 </details>
 
@@ -207,15 +207,15 @@ Grâce à l'intégration de `readline`, il est possible d'éditer la ligne de co
 <details>
 <summary>📜 Historique des commandes</summary>
 <br>
-Les commandes précédemment exécutées sont sauvegardées dans l'historique.
-Les flèches du haut et du bas permettent de naviguer entre les commandes.
+Les commandes précédemment exécutées sont sauvegardées dans l'historique.  
+Les flèches haut et bas permettent de naviguer entre les commandes.
 
 </details>
 
 <details>
 <summary>🔧 Autocomplétion</summary>
 <br>
-Le shell supporte l'autocomplétion des noms de fichiers et dossiers
+Le shell supporte l'autocomplétion des noms de fichiers et de dossiers.
 
 ```bash
 $ Mak<TAB>
@@ -229,8 +229,8 @@ Makefile
 <br>
 Le shell gère certains signaux utilisateur :
 
-* `Ctrl + C` : signal `SIGINT`, interrompt la commande en cours, ou créée une nouvelle ligne de shell
-* `Ctrl + D` : envoie l'EOF, quitte le shell ou arrête la saisie de l'input d'une commande.
+* `Ctrl + C` : signal `SIGINT`, interrompt la commande en cours ou crée une nouvelle ligne de shell
+* `Ctrl + D` : envoie l'EOF, quitte le shell ou termine la saisie de l'entrée d'une commande
 * `Ctrl + \` : signal `SIGQUIT`, interrompt la commande en cours
 
 </details>
