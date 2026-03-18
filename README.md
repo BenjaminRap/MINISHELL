@@ -3,6 +3,8 @@
 **Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.  
 Il reproduit une partie significative du comportement d'un shell classique.
 
+![demo](https://github.com/user-attachments/assets/4f100bf5-4485-4c01-9d3f-c37baa0bcb5c)
+
 ---
 
 ## Installation
