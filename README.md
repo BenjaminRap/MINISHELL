@@ -184,19 +184,6 @@ file not found
 </details>
 
 <details>
-<summary>🔹 Séparation de commandes</summary>
-
-Plusieurs commandes peuvent être exécutées sur une seule ligne avec `;`.
-
-```bash
-$ echo hello ; echo world
-hello
-world
-```
-
-</details>
-
-<details>
 <summary>🌀 Subshells</summary>
 <br>
 Les commandes peuvent être exécutées dans un sous-shell.
@@ -221,24 +208,18 @@ Grâce à l'intégration de `readline`, il est possible d'éditer la ligne de co
 <summary>📜 Historique des commandes</summary>
 <br>
 Les commandes précédemment exécutées sont sauvegardées dans l'historique.
-
-```bash
-$ history
-1  ls
-2  echo hello
-3  cat file.txt
-```
+Les flèches du haut et du bas permettent de naviguer entre les commandes.
 
 </details>
 
 <details>
 <summary>🔧 Autocomplétion</summary>
 <br>
-Le shell supporte l'autocomplétion pour faciliter la saisie des commandes.
+Le shell supporte l'autocomplétion des noms de fichiers et dossiers
 
 ```bash
-$ ec<TAB>
-echo
+$ Mak<TAB>
+Makefile
 ```
 
 </details>
@@ -248,23 +229,9 @@ echo
 <br>
 Le shell gère certains signaux utilisateur :
 
-* `Ctrl + C` : interrompt la commande en cours
-* `Ctrl + D` : quitte le shell
-* `Ctrl + \` : signal `SIGQUIT`
-
-</details>
-
-<details>
-<summary>💬 Commentaires</summary>
-<br>
-Le shell supporte les commentaires dans les commandes.
-
-```bash
-$ echo hello # ceci est un commentaire
-hello
-```
-
-Les commentaires peuvent également s'étendre sur plusieurs lignes.
+* `Ctrl + C` : signal `SIGINT`, interrompt la commande en cours, ou créée une nouvelle ligne de shell
+* `Ctrl + D` : envoie l'EOF, quitte le shell ou arrête la saisie de l'input d'une commande.
+* `Ctrl + \` : signal `SIGQUIT`, interrompt la commande en cours
 
 </details>
 
@@ -276,11 +243,6 @@ Le shell supporte l'expansion des wildcards.
 ```bash
 $ ls *.c
 main.c  parser.c  exec.c
-```
-
-```bash
-$ ls file?.txt
-file1.txt  file2.txt
 ```
 
 </details>
