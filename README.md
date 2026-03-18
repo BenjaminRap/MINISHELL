@@ -1,5 +1,7 @@
 # MINISHELL
 
+🇫🇷 [Read the French verion/Lire la version française](README.fr.md)
+
 **Minishell** is an implementation of an interactive Unix shell inspired by Bash, written in C.
 It reproduces a significant part of the behavior of a classic shell.
 
