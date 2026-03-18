@@ -1,7 +1,7 @@
 # MINISHELL
 
-**Minishell** est une implémentation d'un shell Unix interactif inspiré de Bash, codé en C.
-Il reproduit une partie significative du comportement d'un shell classique.
+**Minishell** is an implementation of an interactive Unix shell inspired by Bash, written in C.
+It reproduces a significant part of the behavior of a classic shell.
 
 ![demo](https://github.com/user-attachments/assets/4f100bf5-4485-4c01-9d3f-c37baa0bcb5c)
 
@@ -10,11 +10,11 @@ Il reproduit une partie significative du comportement d'un shell classique.
 ## Installation
 
 <details>
-<summary>🐳 Option 1 : Docker (toutes plateformes)</summary>
+<summary>🐳 Option 1: Docker (all platforms)</summary>
 
-1. Installer Docker : [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+1. Install Docker: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
-2. Lancer le shell dans un conteneur Docker :
+2. Run the shell in a Docker container:
 
 ```bash
 docker run --rm -it benjaminrap/minishell:latest
@@ -23,29 +23,29 @@ docker run --rm -it benjaminrap/minishell:latest
 </details>
 
 <details>
-<summary>💻 Option 2 : Linux (Debian/Ubuntu)</summary>
+<summary>💻 Option 2: Linux (Debian/Ubuntu)</summary>
 
-1. Cloner le dépôt :
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/BenjaminRap/MINISHELL.git
 cd MINISHELL
 ```
 
-2. Installer les dépendances :
+2. Install dependencies:
 
 ```bash
 sudo apt update
 sudo apt install -y make gcc libreadline-dev
 ```
 
-3. Compiler le projet :
+3. Compile the project:
 
 ```bash
 make all
 ```
 
-4. Lancer le shell :
+4. Run the shell:
 
 ```bash
 ./minishell
@@ -55,12 +55,12 @@ make all
 
 ---
 
-## Capacités
+## Features
 
 <details>
-<summary>💾 Exécution de commandes</summary>
+<summary>💾 Command Execution</summary>
 <br>
-Le shell peut exécuter des programmes en les recherchant automatiquement dans la variable d'environnement `PATH`.
+The shell can execute programs by automatically searching in the `PATH` environment variable.
 
 ```bash
 $ ls
@@ -72,7 +72,7 @@ minishell  README.md  src
 <details>
 <summary>🔗 Pipes</summary>
 <br>
-Les pipes permettent de connecter la sortie d'une commande à l'entrée d'une autre.
+Pipes allow connecting the output of one command to the input of another.
 
 ```bash
 $ ls | wc -l
@@ -84,7 +84,7 @@ $ ls | wc -l
 <details>
 <summary>➡️ Redirections</summary>
 <br>
-Le shell supporte les redirections d'entrée et de sortie.
+The shell supports input and output redirections.
 
 ```bash
 $ echo "hello world" > file.txt
@@ -92,14 +92,14 @@ $ cat file.txt
 hello world
 ```
 
-Redirection d'entrée :
+Input redirection:
 
 ```bash
 $ wc -l < file.txt
 1
 ```
 
-Ajout à la fin d'un fichier :
+Append to a file:
 
 ```bash
 $ echo "another line" >> file.txt
@@ -110,7 +110,7 @@ $ echo "another line" >> file.txt
 <details>
 <summary>📄 Heredoc</summary>
 <br>
-Permet de fournir un bloc de texte directement à une commande.
+Allows providing a block of text directly to a command.
 
 ```bash
 $ cat << EOF
@@ -126,7 +126,7 @@ world
 <details>
 <summary>⚙️ Builtins</summary>
 <br>
-Certaines commandes sont exécutées directement par le shell :
+Some commands are executed directly by the shell:
 
 * `cd`
 * `echo`
@@ -136,7 +136,7 @@ Certaines commandes sont exécutées directement par le shell :
 * `env`
 * `exit`
 
-Exemple :
+Example:
 
 ```bash
 $ cd ..
@@ -147,9 +147,9 @@ $ pwd
 </details>
 
 <details>
-<summary>🌐 Variables d'environnement</summary>
+<summary>🌐 Environment Variables</summary>
 <br>
-Le shell permet d'utiliser et de définir des variables d'environnement.
+The shell allows using and setting environment variables.
 
 ```bash
 $ export NAME=world
@@ -157,7 +157,7 @@ $ echo hello $NAME
 hello world
 ```
 
-Le code de retour de la dernière commande est accessible via `$?`.
+The return code of the last command is accessible via `$?`.
 
 ```bash
 $ ls
@@ -168,9 +168,9 @@ $ echo $?
 </details>
 
 <details>
-<summary>⚡ Exécution conditionnelle</summary>
+<summary>⚡ Conditional Execution</summary>
 <br>
-Le shell supporte les opérateurs logiques `&&` et `||`.
+The shell supports the logical operators `&&` and `||`.
 
 ```bash
 $ mkdir test && cd test
@@ -186,7 +186,7 @@ file not found
 <details>
 <summary>🌀 Subshells</summary>
 <br>
-Les commandes peuvent être exécutées dans un sous-shell.
+Commands can be executed in a subshell.
 
 ```bash
 $ (cd /tmp && ls)
@@ -195,27 +195,27 @@ $ (cd /tmp && ls)
 </details>
 
 <details>
-<summary>↔️ Navigation dans la ligne de commande</summary>
+<summary>↔️ Command Line Navigation</summary>
 <br>
-Grâce à l'intégration de `readline`, il est possible d'éditer la ligne de commande :
+Thanks to the `readline` integration, it is possible to edit the command line:
 
-* déplacer le curseur avec les flèches gauche/droite
-* modifier une commande avant de l'exécuter
+* move the cursor with left/right arrows
+* modify a command before executing it
 
 </details>
 
 <details>
-<summary>📜 Historique des commandes</summary>
+<summary>📜 Command History</summary>
 <br>
-Les commandes précédemment exécutées sont sauvegardées dans l'historique.  
-Les flèches haut et bas permettent de naviguer entre les commandes.
+Previously executed commands are saved in the history.  
+Up and down arrows allow navigating through commands.
 
 </details>
 
 <details>
-<summary>🔧 Autocomplétion</summary>
+<summary>🔧 Autocompletion</summary>
 <br>
-Le shell supporte l'autocomplétion des noms de fichiers et de dossiers.
+The shell supports autocompletion for file and folder names.
 
 ```bash
 $ Mak<TAB>
@@ -225,20 +225,20 @@ Makefile
 </details>
 
 <details>
-<summary>🚨 Gestion des signaux</summary>
+<summary>🚨 Signal Handling</summary>
 <br>
-Le shell gère certains signaux utilisateur :
+The shell handles certain user signals:
 
-* `Ctrl + C` : signal `SIGINT`, interrompt la commande en cours ou crée une nouvelle ligne de shell
-* `Ctrl + D` : envoie l'EOF, quitte le shell ou termine la saisie de l'entrée d'une commande
-* `Ctrl + \` : signal `SIGQUIT`, interrompt la commande en cours
+* `Ctrl + C`: `SIGINT` signal, interrupts the current command or creates a new shell line
+* `Ctrl + D`: sends EOF, exits the shell or ends the input of a command
+* `Ctrl + \`: `SIGQUIT` signal, interrupts the current command
 
 </details>
 
 <details>
 <summary>🌟 Wildcards</summary>
 <br>
-Le shell supporte l'expansion des wildcards.
+The shell supports wildcard expansion.
 
 ```bash
 $ ls *.c
